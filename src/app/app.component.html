@@ -1,0 +1,10 @@
+<hello name="{{ name }}"></hello>
+
+<input [(ngModel)]="searchText" placeholder="search text goes here">
+<div *ngFor="let item of characters | filter: searchText">
+  <label>
+    <input type="checkbox" [(ngModel)]="item.checked">
+    {{ item.name }}
+  </label>
+</div>
+
